@@ -24,6 +24,7 @@ public class WebDriverManagerTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.pl/");
         driver.manage().window().maximize();
+        driver.close();
     }
 }
 
