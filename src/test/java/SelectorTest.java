@@ -18,5 +18,6 @@ public class SelectorTest {
 //        driver.findElement(By.linkText("Visit W3Schools.com!"));
         driver.findElement(By.cssSelector("li:nth-child(2)"));
 
+
     }
 }
