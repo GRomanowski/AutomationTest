@@ -7,8 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class BaseActionTest {
-
+public class BaseActionTest{
     @Test
     public void performAction() {
         WebDriverManager.chromedriver().setup();

@@ -72,4 +72,32 @@ public class HomeWorkBasic {
         cars.selectByIndex(3);
         driver.close();
     }
+
+    @Test
+    public void radioButton() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("[type=checkbox]")).click();
+        driver.close();
+    }
+
+    @Test
+    public void secoundRadioButton() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("[value='male']")).click();
+        driver.close();
+    }
+
+    @Test
+    public void userNameField() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("input[type=text]:nth-child(2)")).clear();
+        driver.findElement(By.cssSelector("input[type=text]:nth-child(2)")).sendKeys("Adam");
+        driver.close();
+    }
 }
