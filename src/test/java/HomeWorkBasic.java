@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
@@ -99,5 +100,29 @@ public class HomeWorkBasic {
         driver.findElement(By.cssSelector("input[type=text]:nth-child(2)")).clear();
         driver.findElement(By.cssSelector("input[type=text]:nth-child(2)")).sendKeys("Adam");
         driver.close();
+    }
+
+    @Test
+    public void passwordField(){
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("input[type=password]")).clear();
+        driver.findElement(By.cssSelector("input[type=password]")).sendKeys("Aa");
+        driver.close();
+    }
+
+    @Test
+    public void clickSubmitButton(){
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("body > form:nth-child(17) > input[type=submit]:nth-child(8)")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        driver.switchTo().alert();
+        alert.accept();
+        driver.close();
+
     }
 }
