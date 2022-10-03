@@ -103,7 +103,7 @@ public class HomeWorkBasic {
     }
 
     @Test
-    public void passwordField(){
+    public void passwordField() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
@@ -113,7 +113,7 @@ public class HomeWorkBasic {
     }
 
     @Test
-    public void clickSubmitButton(){
+    public void clickSubmitButton() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
@@ -123,6 +123,24 @@ public class HomeWorkBasic {
         driver.switchTo().alert();
         alert.accept();
         driver.close();
+    }
 
+    @Test
+    public void clickMe() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        driver.findElement(By.cssSelector("#newPage")).click();
+        driver.close();
+    }
+
+    @Test
+    public void childTest() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+        String tekst = driver.findElement(By.cssSelector("#container > ul > li:nth-child(1) > ul > li")).getText();
+        System.out.println(tekst);
+        driver.close();
     }
 }
