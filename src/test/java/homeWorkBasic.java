@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
@@ -10,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class HomeWorkBasic {
+public class homeWorkBasic {
 
 
     @Test
@@ -19,7 +18,7 @@ public class HomeWorkBasic {
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
         WebElement h1Name = driver.findElement(By.xpath("/html/body/h1"));
-        Assert.assertTrue(h1Name.getText().equals("Witaj na stronie testowej"));
+        Assert.assertEquals("Witaj na stronie testowej", h1Name.getText());
         driver.close();
     }
 
