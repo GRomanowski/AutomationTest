@@ -33,7 +33,6 @@ public class homeWorkBasic {
         alert.accept();
         driver.close();
     }
-
     @Test
     public void clickOnFirstLink() {
         WebDriverManager.chromedriver().setup();
@@ -42,7 +41,6 @@ public class homeWorkBasic {
         driver.findElement(By.linkText("Visit W3Schools.com!")).click();
         driver.close();
     }
-
     @Test
     public void clickOnSecondtLink() {
         WebDriverManager.chromedriver().setup();
@@ -51,7 +49,6 @@ public class homeWorkBasic {
         driver.findElement(By.linkText("IamWeirdLink")).click();
         driver.close();
     }
-
     @Test
     public void itemFromTable() {
         WebDriverManager.chromedriver().setup();
@@ -61,7 +58,6 @@ public class homeWorkBasic {
         System.out.println(driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td[2]")).getText());
         driver.close();
     }
-
     @Test
     public void select() {
         WebDriverManager.chromedriver().setup();
@@ -72,7 +68,6 @@ public class homeWorkBasic {
         cars.selectByIndex(3);
         driver.close();
     }
-
     @Test
     public void radioButton() {
         WebDriverManager.chromedriver().setup();
@@ -81,7 +76,6 @@ public class homeWorkBasic {
         driver.findElement(By.cssSelector("[type=checkbox]")).click();
         driver.close();
     }
-
     @Test
     public void secoundRadioButton() {
         WebDriverManager.chromedriver().setup();
@@ -90,7 +84,6 @@ public class homeWorkBasic {
         driver.findElement(By.cssSelector("[value='male']")).click();
         driver.close();
     }
-
     @Test
     public void userNameField() {
         WebDriverManager.chromedriver().setup();
@@ -110,7 +103,6 @@ public class homeWorkBasic {
         driver.findElement(By.cssSelector("input[type=password]")).sendKeys("Aa");
         driver.close();
     }
-
     @Test
     public void clickSubmitButton() {
         WebDriverManager.chromedriver().setup();
@@ -123,7 +115,6 @@ public class homeWorkBasic {
         alert.accept();
         driver.close();
     }
-
     @Test
     public void clickMe() {
         WebDriverManager.chromedriver().setup();
@@ -132,7 +123,6 @@ public class homeWorkBasic {
         driver.findElement(By.cssSelector("#newPage")).click();
         driver.close();
     }
-
     @Test
     public void childTest() {
         WebDriverManager.chromedriver().setup();
