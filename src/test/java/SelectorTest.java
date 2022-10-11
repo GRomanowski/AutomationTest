@@ -17,6 +17,7 @@ public class SelectorTest {
         // szukanie tekstu
 //        driver.findElement(By.linkText("Visit W3Schools.com!"));
         driver.findElement(By.cssSelector("li:nth-child(2)"));
+        driver.close();
 
 
     }
