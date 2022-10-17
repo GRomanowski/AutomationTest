@@ -9,11 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class homeWorkBasic {
+public class HomeWorkBasic {
 
 
     @Test
-    public void isNameisDisplayed() {
+    public void isNameIsDisplayed() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
@@ -133,3 +133,5 @@ public class homeWorkBasic {
         driver.close();
     }
 }
+//*[@id="container"]/ul/li[1]/ul/li
+//div[@class="jobinterview"]
